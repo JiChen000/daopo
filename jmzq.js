@@ -1,4 +1,4 @@
-import 'https://raw.githubusercontent.com/JiChen000/daopo/refs/heads/main/jmzq_original.js';
+import 'https://raw.githack.com/JiChen000/daopo/main/jmzq_original.js';
 
 (() => {
   const w = window.parent || window;
