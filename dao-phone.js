@@ -1756,7 +1756,7 @@ ${d.map(he=>`${he.index}:${he.content}`).join(`
 };
 (()=>{let enabled=false;try{const storage=window.parent?.localStorage??localStorage;enabled=storage.getItem('daoyuan_content_beautifier_enabled_v1')==='true';}catch{}if(enabled)globalThis.__daoyuanInstallContentBeautifierV26();})();
 
-;const __daoyuanConfigHelperRemoteUrl='https://gist.githubusercontent.com/JiChen000/7260a3270b8fec16a979b9d5902e0616/raw/f5a0f5aefd317bd1617b85210afea40c279e4d89/daoyuan-config-helper.min.js';
+;const __daoyuanConfigHelperRemoteUrl='https://raw.githubusercontent.com/JiChen000/daopo/refs/heads/main/dao-config-helper.min.js';
 let __daoyuanConfigHelperLoadPromise=null;
 const __daoyuanFindConfigHelperBubble=()=>{const host=window.parent??window;return host.document.getElementById('bp-switch-bubble')??host.document.getElementById('jmzq-bubble');};
 globalThis.__daoyuanSetConfigHelperLauncherVisibleV133=(visible)=>{try{const host=window.parent??window;const bubble=__daoyuanFindConfigHelperBubble();const panel=host.document.getElementById('bp-switch-panel')??host.document.getElementById('jmzq-panel');if(bubble)bubble.style.display=visible?'':'none';if(!visible&&panel)panel.style.display='none';}catch{}};
