@@ -1756,12 +1756,13 @@ ${d.map(he=>`${he.index}:${he.content}`).join(`
 };
 (()=>{let enabled=false;try{const storage=window.parent?.localStorage??localStorage;enabled=storage.getItem('daoyuan_content_beautifier_enabled_v1')==='true';}catch{}if(enabled)globalThis.__daoyuanInstallContentBeautifierV26();})();
 
-;const __daoyuanConfigHelperRemoteUrl='https://raw.githubusercontent.com/JiChen000/daopo/refs/heads/main/dao-config-helper.min.js';
+;const __daoyuanConfigHelperRemoteUrl='https://raw.githack.com/JiChen000/daopo/main/dao-config-helper.min.js';
+const __daoyuanConfigHelperFallbackUrl='https://cdn.jsdelivr.net/gh/JiChen000/daopo/main/dao-config-helper.min.js';
 let __daoyuanConfigHelperLoadPromise=null;
 const __daoyuanFindConfigHelperBubble=()=>{const host=window.parent??window;return host.document.getElementById('bp-switch-bubble')??host.document.getElementById('jmzq-bubble');};
 globalThis.__daoyuanSetConfigHelperLauncherVisibleV133=(visible)=>{try{const host=window.parent??window;const bubble=__daoyuanFindConfigHelperBubble();const panel=host.document.getElementById('bp-switch-panel')??host.document.getElementById('jmzq-panel');if(bubble)bubble.style.display=visible?'':'none';if(!visible&&panel)panel.style.display='none';}catch{}};
 globalThis.__daoyuanInstallConfigHelperV133=async()=>{
-try{const host=window.parent??window;if(!__daoyuanFindConfigHelperBubble()){if(!__daoyuanConfigHelperLoadPromise)__daoyuanConfigHelperLoadPromise=import(__daoyuanConfigHelperRemoteUrl).catch(()=>import(__daoyuanConfigHelperRemoteUrl)).catch(error=>{__daoyuanConfigHelperLoadPromise=null;throw error;});await __daoyuanConfigHelperLoadPromise;}let visible=true;try{const storage=host.localStorage??localStorage;visible=storage.getItem('daoyuan_config_helper_launcher_visible_v1')!=='false';}catch{}globalThis.__daoyuanSetConfigHelperLauncherVisibleV133(visible);}catch(error){console.warn('[道渊配置小助手] 远程脚本加载失败',error);}
+try{const host=window.parent??window;if(!__daoyuanFindConfigHelperBubble()){if(!__daoyuanConfigHelperLoadPromise)__daoyuanConfigHelperLoadPromise=import(__daoyuanConfigHelperRemoteUrl).catch(error=>{__daoyuanConfigHelperLoadPromise=null;throw error;});await __daoyuanConfigHelperLoadPromise;}let visible=true;try{const storage=host.localStorage??localStorage;visible=storage.getItem('daoyuan_config_helper_launcher_visible_v1')!=='false';}catch{}globalThis.__daoyuanSetConfigHelperLauncherVisibleV133(visible);}catch(error){console.warn('[道渊配置小助手] 远程脚本加载失败',error);}
 };
 const __daoyuanEnsureConfigHelperV133=()=>{try{if(!__daoyuanFindConfigHelperBubble())void globalThis.__daoyuanInstallConfigHelperV133();else globalThis.__daoyuanSetConfigHelperLauncherVisibleV133(true);}catch{}};
 void globalThis.__daoyuanInstallConfigHelperV133();
